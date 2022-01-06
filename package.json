@@ -1,0 +1,42 @@
+{
+  "name": "twitter-openweathermap",
+  "version": "2.0.3",
+  "private": true,
+  "description": "Publish OpenWeatherMap API data to Twitter",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "NODE_ENV=production node .",
+    "dev": "nodemon .",
+    "lint": "eslint --ext .js .",
+    "test": "mocha test",
+    "test:coverage": "nyc mocha test",
+    "doc-view": "jsdoc --private -c ./conf_jsdoc.json -r && live-server --host=localhost --port=4400 --open=doc/ --ignore=node_modules/,test/*,src/*,.git/,.",
+    "purge": "rm -fr ./doc  && rm -fr ./logs && rm -fr ./.nyc_output"
+  },
+  "keywords": [
+    "Twitter",
+    "OpenWeatherMap",
+    "bot"
+  ],
+  "author": "Dídac García (https://didaquis.github.io/)",
+  "license": "MIT",
+  "engines": {
+    "node": "^10.18.0"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "log4js": "^6.3.0",
+    "moment-timezone": "^0.5.33",
+    "node-fetch": "^2.6.1",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "jsdoc": "^3.6.7",
+    "live-server": "^1.2.1",
+    "mocha": "^9.1.1",
+    "nodemon": "^2.0.12",
+    "nyc": "^15.1.0",
+    "sinon": "^11.1.2"
+  }
+}
